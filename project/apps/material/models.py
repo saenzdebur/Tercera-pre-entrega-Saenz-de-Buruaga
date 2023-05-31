@@ -11,12 +11,15 @@ class Material(models.Model):
 
 
 class Dimensiones(models.Model):
-    largo = models.CharField(null=True)
-    ancho = models.CharField(max_length=50)
-    espesor = models.CharField(max_length=50)
+    largo = models.CharField(max_length=20)
+    ancho = models.CharField(max_length=20)
+    espesor = models.CharField(max_length=20)
 
     def __str__(self):
         return f"{self.ancho} {self.espesor}"
 
 
 # Crear un Model más
+
+# dato = input("Ingrese un número: ")
+# numero = int(dato)
