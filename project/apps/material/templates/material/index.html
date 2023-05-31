@@ -1,0 +1,13 @@
+{% extends 'home.html' %}
+
+{% block TITULO %}MATERIALES{% endblock %}
+
+{% block CONTENIDO %}
+    {% for material in Materiales %}
+        
+        <p>{{ material.largo }}</p>
+        <p>{{ material.ancho }}</p>
+        <p>{{ material.espesor }}</p>
+    {% endfor %}
+    <a href="{% url 'index' %}">Ir a menú principal</a>
+{% endblock %}
