@@ -4,10 +4,12 @@
 
 {% block CONTENIDO %}
     {% for material in Materiales %}
-        
-        <p>{{ material.largo }}</p>
-        <p>{{ material.ancho }}</p>
-        <p>{{ material.espesor }}</p>
+        <h2>{{ material.nombre }}</h2>
+        <p>{{ dimensiones.largo }}</p>
+        <p>{{ dimensiones.ancho }}</p>
+        <p>{{ dimensiones.espesor }}</p>
     {% endfor %}
-    <a href="{% url 'index' %}">Ir a menú principal</a>
+    <div style="text-align: center; font-size: xx-large;">
+        <a href="{% url 'index' %}">Ir a menú principal</a>
+    </div>
 {% endblock %}

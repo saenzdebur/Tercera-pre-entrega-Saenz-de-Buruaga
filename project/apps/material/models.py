@@ -1,3 +1,6 @@
+from inspect import formatannotation
+from pyclbr import Class
+
 from django.db import models
 
 # Create your models here.
@@ -14,12 +17,15 @@ class Dimensiones(models.Model):
     largo = models.CharField(max_length=20)
     ancho = models.CharField(max_length=20)
     espesor = models.CharField(max_length=20)
+    material_id = models.ForeignKey(Material, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return f"{self.ancho} {self.espesor}"
+        return f"{self.largo} {self.ancho} {self.espesor} {self.material_id}"
 
 
-# Crear un Model más
+class Pais_Origen(models.Model):
+    nombre = models.CharField(max_length=50)
+    pais_id = models.ForeignKey(Material, on_delete=models.SET_NULL, null=True)
 
-# dato = input("Ingrese un número: ")
-# numero = int(dato)
+    def __str__(self):
+        return self.nombre
