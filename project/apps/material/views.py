@@ -6,6 +6,6 @@ from .models import Material
 
 
 def index(request):
-    material_registros = Material.objects.all()
-    contexto = {"material": material_registros}
+    material = Material.objects.all()
+    contexto = {"material": material}
     return render(request, "material/index.html", contexto)
