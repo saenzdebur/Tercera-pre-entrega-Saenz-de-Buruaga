@@ -25,7 +25,7 @@ class Dimensiones(models.Model):
 
 class Pais_Origen(models.Model):
     nombre = models.CharField(max_length=50)
-    pais_id = models.ForeignKey(Material, on_delete=models.SET_NULL, null=True)
+    material_id = models.ForeignKey(Material, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.nombre
