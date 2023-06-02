@@ -12,10 +12,10 @@ class MaterialForm(forms.ModelForm):
 class DimensionForm(forms.ModelForm):
     class Meta:
         model = Dimension
-        fields = {"largo", "ancho", "espesor"}
+        fields = "__all__"
 
 
 class ProveedorForm(forms.ModelForm):
     class Meta:
         model = Proveedor
-        fields = {"nombre", "pais"}
+        fields = "__all__"

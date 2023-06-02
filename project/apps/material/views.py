@@ -4,6 +4,8 @@ from django.shortcuts import redirect, render
 
 from .models import Dimension, Material, Proveedor
 
+from .form import MaterialForm
+
 # Create your views here.
 
 
@@ -35,7 +37,7 @@ def crear_materiales_predeterminados(request):
 
 
 def crear_material(request):
-    from .forms import MaterialForm
+    # from .forms import MaterialForm
 
     if request.method == "POST":
         form = MaterialForm(request.POST)
