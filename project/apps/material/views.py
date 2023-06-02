@@ -18,7 +18,7 @@ def crear_materiales_predeterminados(request):
     # Crea instancias de materiales
     m1 = Material.objects.create(nombre="Cobre", proveedor_id=1)
     m2 = Material.objects.create(nombre="Aluminio", proveedor_id=2)
-    m3 = Material.objects.create(nombre="Latón", proveedor_id=3)
+    m3 = Material.objects.create(nombre="Latón", proveedor_id=1)
 
     # Crear instancias de dimensiones
     Material.objects.create(largo=3000, ancho=1500, espesor=2, material_id=m2)
