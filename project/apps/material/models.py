@@ -14,9 +14,9 @@ class Material(models.Model):
 
 
 class Dimension(models.Model):
-    largo = models.IntegerField
-    ancho = models.IntegerField
-    espesor = models.IntegerField
+    largo = models.IntegerField()
+    ancho = models.IntegerField()
+    espesor = models.IntegerField()
     material_id = models.ForeignKey(Material, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
