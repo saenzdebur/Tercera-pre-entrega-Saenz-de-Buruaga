@@ -1,0 +1,11 @@
+{% extends 'home.html' %}
+
+{% block TITULO %}Alta de Materiales{% endblock %}
+
+{% block CONTENIDO %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock %}
