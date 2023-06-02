@@ -1,14 +1,18 @@
 {% extends 'home.html' %}
 
-{% block TITULO %}Materiales{% endblock %}
+{% block TITULO %}Registro de Materiales Ingresados{% endblock %}
 
 {% block CONTENIDO %}
     {% for material in materiales %}<h2>{{ material.nombre }}</h2>{% endfor %}
     <br>
     <div style="text-align: center; font-size: xx-large;">
-        <a href="{% url 'material:crear-materiales' %}">Crear datos preestablecidos</a>
+
+        
+        <a href="{% url 'material:crear' %}">Registrar Material</a>
         <br>
-        <a href="{% url 'material:crear' %}">Crear material</a>
+        <a href="{% url 'material:crear-dimension' %}">Registrar Dimensión</a>
+        <br>
+        <a href="{% url 'material:crear-proveedor' %}">Registrar Proveedor</a>
         <br>
         <a href="{% url 'index' %}">Ir a menú principal</a>
         <br>
