@@ -3,12 +3,12 @@
 {% block TITULO %}Materiales{% endblock %}
 
 {% block CONTENIDO %}
-    <!-- {% for material in materiales %}
+    {% for material in materiales %}
         <h2>{{ material.nombre }}</h2>
         <p>{{ dimensiones.largo }}</p>
         <p>{{ dimensiones.ancho }}</p>
-        <p>{{ dimensiones.espesor }}</p> 
-{% endfor %}-->
+        <p>{{ dimensiones.espesor }}</p>
+    {% endfor %}
     <div style="text-align: center; font-size: xx-large;">
         <a href="{% url 'index' %}">Ir a menú principal</a>
         <br>
