@@ -13,19 +13,19 @@ class Material(models.Model):
         return self.nombre
 
 
-class Dimensiones(models.Model):
-    largo = models.CharField(max_length=20)
-    ancho = models.CharField(max_length=20)
-    espesor = models.CharField(max_length=20)
+class Dimension(models.Model):
+    largo = models.IntegerField(max_length=20)
+    ancho = models.IntegerField(max_length=20)
+    espesor = models.IntegerField(max_length=20)
     material_id = models.ForeignKey(Material, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return f"{self.largo} {self.ancho} {self.espesor} {self.material_id}"
+        return f"{self.largo} {self.ancho} {self.espesor}"
 
 
-class Pais_Origen(models.Model):
+class Proveedor(models.Model):
     nombre = models.CharField(max_length=50)
-    material_id = models.ForeignKey(Material, on_delete=models.SET_NULL, null=True)
+    pais = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.nombre
+        return f" {self.nombre} {self.pais}"

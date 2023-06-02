@@ -4,5 +4,5 @@ from . import models
 
 # Register your models here.
 admin.site.register(models.Material)
-admin.site.register(models.Dimensiones)
-admin.site.register(models.Pais_Origen)
+admin.site.register(models.Dimension)
+admin.site.register(models.Proveedor)
