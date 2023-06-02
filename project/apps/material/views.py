@@ -2,9 +2,8 @@ from audioop import reverse
 
 from django.shortcuts import redirect, render
 
+from .form import DimensionForm, MaterialForm, ProveedorForm
 from .models import Dimension, Material, Proveedor
-
-from .form import MaterialForm
 
 # Create your views here.
 
@@ -30,7 +29,7 @@ def crear_materiales_predeterminados(request):
     # Crear instancias de proveedores
 
     Material.objects.create(nombre="Aluar", pais="Argentina", material_id=m2)
-    Material.objects.create(nombre="Termo", pais="Brasil", material_id=m)
+    Material.objects.create(nombre="Termo", pais="Brasil", material_id=m3)
 
     # url = reverse("material:index")
     return redirect("material:index")
@@ -43,7 +42,7 @@ def crear_material(request):
         form = MaterialForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(reverse("cliente:index"))
+            return redirect(reverse("material:index"))
     else:  # method == "GET"
         form = MaterialForm()
-    return render(request, "cliente/crear.html", {"form": form})
+    return render(request, "material/crear.html", {"form": form})

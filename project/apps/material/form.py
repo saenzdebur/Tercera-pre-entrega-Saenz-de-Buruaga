@@ -6,7 +6,7 @@ from .models import Dimension, Material, Proveedor
 class MaterialForm(forms.ModelForm):
     class Meta:
         model = Material
-        fields = {"nombre"}
+        fields = "__all__"
 
 
 class DimensionForm(forms.ModelForm):
